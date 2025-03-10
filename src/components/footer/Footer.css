@@ -1,0 +1,29 @@
+footer{
+    min-height: 70vh;
+}
+
+footer img{
+    width: 200px;
+}
+
+footer p{
+    color: #fff !important;
+}
+
+.footer-icons a{
+    color: #fff;
+    margin-right: 20px;
+}
+
+.info-col a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer h4{
+    margin-bottom: 60px !important;
+}
+
+.logo-col-container{
+    margin-right: 50px;
+}

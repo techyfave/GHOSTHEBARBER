@@ -1,0 +1,11 @@
+.Contact-form input, 
+.Contact-form textarea{
+    border:0 ;
+    border-bottom: 1px black solid;
+    outline: none;
+    padding: 10px;
+}
+
+/* .Contact-form textarea{
+    height: 100px;
+} */

@@ -1,0 +1,48 @@
+.service-card .card-img{
+    height: 250px; /* Adjust as needed */
+    transition: transform 700ms ease-in-out;
+    object-fit: cover;
+}
+
+
+.service-card{
+    height: 500px !important;
+    position: relative;
+    transition: transform 500ms ease-in;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.service-card:hover .card-img {
+    transform: scale(1.05);
+
+}
+
+.service-card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 2;
+    color: #000 !important;
+}
+
+.service-card-body h3{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.service-card-body img{
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    right: 45%;
+}
+

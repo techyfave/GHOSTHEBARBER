@@ -1,0 +1,35 @@
+main{
+  min-height: 100vh;
+  /* border: 2px solid red; */
+  background-color: #fff;
+
+}
+
+.gold-bg{
+  background-color: #755503 !important;
+}
+
+.gold-col{
+  color: #755503 !important;
+}
+
+.white-gold{
+  background-color: #f9f8f6 !important;
+}
+
+.white-bg{
+  background-color: #fffffe;
+}
+
+.small-img{
+  width: 70px !important;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+p{
+  color: #000 !important;
+}
+
+
