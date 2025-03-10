@@ -15,7 +15,7 @@ function Hero({heroBg}) {
   return (
     <div style={style}  className='hero-section d-flex align-items-end'>
       <Container>
-        <h1 className='position-relative z-2 col-sm-12 col-md-8'>Life Isn't Perfect But Your Hair Can <span className=' p-1 rounded'>BE</span> <i className="fa-solid fa-scissors gold-col"></i></h1>
+        <h1 className='position-relative z-2 col-sm-12 col-md-8'>Life Isn't Perfect But Your Hair Can <span className=' p-1 rounded'>BE</span> <i className="fa-solid fa-scissors gold-col"></i> with ghost</h1>
         <Button text="Appointment" dest="#" className={"z-2 my-5 px-4 py-2 fs-5"}/>
       </Container>
       <div className='overlay'></div>
