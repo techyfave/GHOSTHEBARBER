@@ -5,7 +5,7 @@ function Contact() {
   return (
     <div className="contact-section p-5">
         <Container>
-        <h2 className="text-black fw-bold fs-1">Make an Apointment</h2>
+        <h2 className="text-black fw-bold fs-1">Contact Us</h2>
         <div className='contact-container'>
             <Row>
                 <Col sm={12} md={7} className='mb-5 gap-5'>
@@ -14,7 +14,8 @@ function Contact() {
                         <input type="email" placeholder='Email'/>
                         <textarea placeholder='Message'></textarea>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, sed sint, deleniti quis nam reiciendis voluptas voluptates nulla 
+                            We value your feedback and are committed to providing the best service possible. <br />If you have experienced any issues, please fill out this form with the details of your complaint. Our team will review your concerns and work towards a resolution as quickly as possible.
+                            Thank you for bringing this to our attention we appreciate the opportunity to improve our service.
                         </p>
                         <button className='btn gold-bg p-3 text-white'>Send Message</button>
                     </form>  
