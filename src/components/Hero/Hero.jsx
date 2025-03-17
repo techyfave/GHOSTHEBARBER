@@ -9,6 +9,7 @@ function Hero({heroBg}) {
         backgroundImage: `url(${heroBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundAttachment:`fixed`,
         height: "100%",
         width: "100%",
     }

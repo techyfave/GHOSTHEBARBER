@@ -10,7 +10,7 @@ function Header() {
   return (
     <Navbar style={style} expand="lg" className="navbar navbar-dark position-fixed right-0 w-100 z-3">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
             <img src={logo} width={"150px"} alt="GhostBarber" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -20,6 +20,8 @@ function Header() {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/services">Services</Nav.Link>
             <Nav.Link href="/Contact">Contact</Nav.Link>
+            <Nav.Link href="/gallary">Gallary</Nav.Link>
+            <Nav.Link href="/upload">Upload</Nav.Link>
             <Button text="Appointment" dest="#"/>
           </Nav>
         </Navbar.Collapse>

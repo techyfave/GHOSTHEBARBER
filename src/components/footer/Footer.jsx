@@ -18,13 +18,13 @@ function Footer() {
                   <i className="fa-brands fa-facebook-f"></i>
                 </a>
                 <a href="#">
-                  <i class="fa-brands fa-instagram"></i>
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a href="#">
-                  <i class="fa-solid fa-x"></i>
+                  <i className="fa-solid fa-x"></i>
                 </a>
                 <a href="#">
-                  <i class="fa-brands fa-threads"></i>
+                  <i className="fa-brands fa-threads"></i>
                 </a>
               </div>
             </Col>

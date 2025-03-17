@@ -59,7 +59,7 @@ function Services() {
                     </Col>
                 </Row>
             </div>
-            <Button text="See Gallary" className={"my-5 fs-5 px-5"}></Button>
+            <Button dest={`/gallary`} text="See Gallary" className={"my-5 fs-5 px-5"}></Button>
         </Container>
     </div>
   )
