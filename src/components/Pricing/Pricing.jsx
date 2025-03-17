@@ -18,10 +18,11 @@ function Pricing() {
           <div>
             <h3>Hair Styles</h3>
             <PriceList
-             text="adipisicing elit. Provident totam doloribus"
+             text="haircut & fade, hair & breads line-up,
+             razor, hair & breads trim, shaving"
              img={clipper}
-             price={8}
-             title="Hair cut"
+             price={500}
+             title="simple cut"
              />
             <PriceList
              text="adipisicing elit. Provident totam doloribus"
