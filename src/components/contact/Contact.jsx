@@ -1,23 +1,84 @@
 import "./Contact.css"
+import { useState, useRef } from "react";
 import { Container, Row, Col } from 'react-bootstrap'
+import axios from "axios";
+import { db } from "../../firebase/firebase";
+import { addDoc, collection, serverTimestamp, query, where, getDocs } from "firebase/firestore";
+import emailjs from "emailjs-com"
 
 function Contact() {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+
+    const handleContact = async (e)=>{
+        e.preventDefault()
+        if(!name || !email || !message){
+            alert("Please fill out all fields")
+            return;
+        }
+
+        try{
+            await addDoc(collection(db, "contacts"), {
+                    name,
+                    email,
+                    message,
+                    createdAt: serverTimestamp(),
+                  });
+
+                  const emailParams = {
+                          msg_name: name,
+                          msg_email: email,
+                          msg_text: message
+                        };
+                  
+                        await emailjs.send(
+                          "service_h98w2c8", 
+                          "template_fcqgkcp",
+                          emailParams,
+                          "V_ZWZy0yVNuywPrwJ" 
+                        );
+
+                        alert("Message sent successfully!");
+
+                        setName("");
+                        setEmail("");
+                        setMessage("");
+                  
+        }catch (error) {
+            console.error("Error sending message", error);
+            alert("An error occurred. Please try again.");
+          }
+    }
   return (
-    <div className="contact-section p-5">
+    <div className="contact-section p-5" id="contact">
         <Container>
         <h2 className="text-black fw-bold fs-1">Contact Us</h2>
         <div className='contact-container'>
             <Row>
                 <Col sm={12} md={7} className='mb-5 gap-5'>
-                    <form className='Contact-form d-flex flex-column gap-5 me-5'>
-                        <input type="text" placeholder='Name'/>
-                        <input type="email" placeholder='Email'/>
-                        <textarea placeholder='Message'></textarea>
+                    <form onSubmit={handleContact} className='Contact-form d-flex flex-column gap-5 me-5'>
+                        <input
+                         type="text" 
+                         placeholder='Name'
+                         onChange={(e) => setName(e.target.value)}
+                         />
+
+                        <input 
+                        type="email" 
+                        placeholder='Email'
+                        onChange={(e) => setEmail(e.target.value)}
+                        />
+
+                        <textarea 
+                        placeholder='Message'
+                        onChange={(e) => setMessage(e.target.value)}
+                        ></textarea>
                         <p>
                             We value your feedback and are committed to providing the best service possible. <br />If you have experienced any issues, please fill out this form with the details of your complaint. Our team will review your concerns and work towards a resolution as quickly as possible.
                             Thank you for bringing this to our attention we appreciate the opportunity to improve our service.
                         </p>
-                        <button className='btn gold-bg p-3 text-white'>Send Message</button>
+                        <button type="submit" className='btn gold-bg p-3 text-white'>Send Message</button>
                     </form>  
                 </Col>
                 <Col sm={12} md={5}>

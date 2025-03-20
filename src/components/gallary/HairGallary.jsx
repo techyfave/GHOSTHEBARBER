@@ -27,10 +27,10 @@ const HairGallery = () => {
         <Container>
             <Row>
       {haircuts.map((haircut) => (
-        <Col sm={12} md={6} lg={4}>
+        <Col sm={12} md={6} lg={4} key={haircut.id} className="mb-4">
         <Card key={haircut.id} className="card galary-card">
           <Card.Img src={haircut.imageUrl} alt="Haircut" />
-          <Card.Body>
+          <Card.Body className="bg-white">
             <Card.Title as={"h4"} className="fw-bold text-black">{haircut.title}</Card.Title>
              <Card.Text>{haircut.description}</Card.Text>
           </Card.Body>

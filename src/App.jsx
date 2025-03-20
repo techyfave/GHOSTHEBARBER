@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer'
 import Home from './Pages/Home'
 import Upload from './Pages/Upload'
 import Gallery from './Pages/Gallary'
+import AppointmentPage from './Pages/AppointmentPage'
 
 
 
@@ -18,7 +19,8 @@ function App() {
       <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/upload' element={<Upload/>}/>
-              <Route path='/gallary' element={<Gallery></Gallery>}/>
+              <Route path='/gallary' element={<Gallery/>}/>
+              <Route path='/appointment' element={<AppointmentPage/>}/>
         </Routes>
       </main>
           <Footer/>

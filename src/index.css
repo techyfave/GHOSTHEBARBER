@@ -21,6 +21,10 @@ main{
   background-color: #fffffe;
 }
 
+.grey-bg{
+  background-color: #00000066 !important;
+}
+
 .small-img{
   width: 70px !important;
   height: 70px;

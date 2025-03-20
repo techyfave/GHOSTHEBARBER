@@ -9,7 +9,7 @@ import Button from '../button/Button'
 
 function Services() {
   return (
-    <div className='service-section py-5 mt-5'>
+    <div className='service-section py-5 mt-5' id='services'>
         <Container className='text-center'>
             <div className="service-heading text-center text-black">
                 <h2 className='text-black gold-col fw-bold'>Our Services</h2>

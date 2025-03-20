@@ -1,83 +1,32 @@
-import React from 'react'
-import "./Pricing.css"
-import { Container, Row, Col } from 'react-bootstrap'
-import PriceList from './PriceList'
-import clipper from "../../assets/clipper.png"
+import React from "react";
+import { Card, Col, Container, Row } from "react-bootstrap";
 
-function Pricing() {
+const services = [
+  { name: "Regular Haircut", price: "₦1,500" },
+  { name: "Kids Haircut", price: "₦1,200" },
+  { name: "Beard Grooming", price: "₦1,000" },
+  { name: "Haircut + Beard Trim", price: "₦2,500" },
+  { name: "Home Service", price: "₦5,000+" },
+];
+
+const Pricing = () => {
   return (
-    <div className='pricing-section p-5'>
-      <Container>
-        <div>
-          <h2 className='text-black fw-bold'>Our Pricing</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident totam doloribus itaque </p>
-        </div>
-        <div className="price-container">
-          <Row>
-          <Col sm={12} lg={6}>
-          <div>
-            <h3>Hair Styles</h3>
-            <PriceList
-             text="haircut & fade, hair & breads line-up,
-             razor, hair & breads trim, shaving"
-             img={clipper}
-             price={500}
-             title="simple cut"
-             />
-            <PriceList
-             text="adipisicing elit. Provident totam doloribus"
-             img={clipper}
-             price={8}
-             title="Hair cut"
-             />
-            <PriceList
-             text="adipisicing elit. Provident totam doloribus"
-             img={clipper}
-             price={8}
-             title="Hair cut"
-             />
-            <PriceList
-             text="adipisicing elit. Provident totam doloribus"
-             img={clipper}
-             price={8}
-             title="Hair cut"
-             />
-          </div>
+    <Container className="py-5">
+      <h2 className="text-center mb-4 text-black fw-bold"> Our Pricing</h2>
+      <Row className="justify-content-center">
+        {services.map((service, index) => (
+          <Col key={index} md={4} sm={6} xs={12} className="mb-3">
+            <Card className="shadow-sm text-center">
+              <Card.Body>
+                <Card.Title className="fw-bold gold-col">{service.name}</Card.Title>
+                <Card.Text className="fs-4 gold-col text-white">{service.price}</Card.Text>
+              </Card.Body>
+            </Card>
           </Col>
-          <Col sm={12} lg={6}>
-          <div>
-            <h3>Hair Styles</h3>
-            <PriceList
-             text="adipisicing elit. Provident totam doloribus"
-             img={clipper}
-             price={8}
-             title="Hair cut"
-             />
-            <PriceList
-             text="adipisicing elit. Provident totam doloribus"
-             img={clipper}
-             price={8}
-             title="Hair cut"
-             />
-            <PriceList
-             text="adipisicing elit. Provident totam doloribus"
-             img={clipper}
-             price={8}
-             title="Hair cut"
-             />
-            <PriceList
-             text="adipisicing elit. Provident totam doloribus"
-             img={clipper}
-             price={8}
-             title="Hair cut"
-             />
-          </div>
-          </Col>
-          </Row>
-        </div>
-      </Container>
-    </div>
-  )
-}
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
-export default Pricing
+export default Pricing;

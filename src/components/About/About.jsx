@@ -5,7 +5,7 @@ import Button from '../button/Button'
 
 function About() {
   return (
-    <div className='about-container white-gold'>
+    <div className='about-container white-gold' id='about'>
     <Container>
         <div className='about-section py-5'>
             <Row>

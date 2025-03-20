@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { db } from '../../firebase/firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import {Container} from "react-bootstrap"
 
@@ -10,6 +10,7 @@ const UploadImage = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
+  const fileInputRef = useRef(null);
   const handleUpload = async (e) => {
     if (!image) return;
 
@@ -37,9 +38,13 @@ const UploadImage = () => {
     alert("Image uploaded successfully!");
 
 
-    setFile(null);
+    setImage(null);
     setTitle("");
     setDescription("");
+
+    if (fileInputRef.current) {
+      fileInputRef.current.value = null; // Clear file input
+    }
   };
 
   return (
@@ -60,7 +65,10 @@ const UploadImage = () => {
         onChange={(e) => setDescription(e.target.value)}
         className='form-control w-100 mb-4 border'
       />
-      <input type="file" onChange={(e) => setImage(e.target.files[0])} 
+      <input 
+      type="file" 
+      ref={fileInputRef}
+      onChange={(e) => setImage(e.target.files[0])} 
       className='form-control w-50 mb-5'
       />
       <button className='btn gold-bg text-white' type='button' onClick={handleUpload}>Upload Image</button>

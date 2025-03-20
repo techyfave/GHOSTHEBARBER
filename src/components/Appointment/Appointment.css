@@ -1,0 +1,12 @@
+@media(max-width:900px){
+    /* .appt-form-container{
+        border: 2px solid red;
+    } */
+    #appt-form{
+        width: 100% !important;
+    }
+
+    .appt-form-container label{
+        color: #fff !important;
+    }
+}

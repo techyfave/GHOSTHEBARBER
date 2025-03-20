@@ -1,4 +1,7 @@
 // Import the functions you need from the SDKs you need
+const fireapi = import.meta.env.VITE_FIREBASE_API_KEY
+console.log(fireapi)
+console.log(import.meta.env)
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
@@ -9,7 +12,7 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAfCK_chsMLq-W6o3iBYRn4fkCZ8KKw0DA",
+  apiKey: fireapi,
   authDomain: "ghostthebarber-d1bec.firebaseapp.com",
   projectId: "ghostthebarber-d1bec",
   storageBucket: "ghostthebarber-d1bec.firebasestorage.app",
