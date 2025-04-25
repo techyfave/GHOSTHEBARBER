@@ -19,7 +19,7 @@ function Header() {
             <Nav.Link href="#services">Services</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
             <Nav.Link as={Link} to="/gallary">Gallary</Nav.Link>
-            <Nav.Link as={Link} to="/upload">Upload</Nav.Link>
+            {/* <Nav.Link as={Link} to="/upload">Upload</Nav.Link> */}
             <Button text="Appointment" dest="/appointment"/>
           </Nav>
         </Navbar.Collapse>
