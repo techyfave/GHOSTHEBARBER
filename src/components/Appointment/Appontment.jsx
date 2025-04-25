@@ -18,7 +18,7 @@ const availableTimeSlots = [
 const BookAppointment = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState();
+  const [phone, setPhone] = useState("");
   const [location, setLocation] = useState("");
   const [appointmentDate, setAppointmentDate] = useState("");
   const [timeSlot, setTimeSlot] = useState("");
@@ -60,12 +60,12 @@ const BookAppointment = () => {
       // Upload receipt to Cloudinary
       const formData = new FormData();
       formData.append("file", receipt);
-      formData.append("upload_preset", "haircut_upload");
-      formData.append("folder", "appointments");
+      formData.append("upload_preset", "haircuts");
+      formData.append("folder", "receipts");
       formData.append("resource_type", "auto");
 
       const response = await axios.post(
-        `https://api.cloudinary.com/v1_1/dpsrsij99/image/upload`,
+        `https://api.cloudinary.com/v1_1/dlksm9tas/image/upload`,
         formData
       );
 
@@ -100,10 +100,10 @@ const BookAppointment = () => {
       };
 
       await emailjs.send(
-        "service_5x3fslf", 
-        "template_n0hnp7y",
+        "service_thp3sxu", 
+        "template_o963zgq",
         emailParams,
-        "2dcl4i1_4cB0k2KfX" 
+        "tcANO7ovuVVB7W2sP" 
       );
 
       alert("Appointment booked successfully! A confirmation email has been sent.");
@@ -111,7 +111,7 @@ const BookAppointment = () => {
       // Reset form fields
       setName("");
       setEmail("");
-      setPhone(0);
+      setPhone("");
       setLocation("");
       setAppointmentDate("");
       setTimeSlot("");

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 const fireapi = import.meta.env.VITE_FIREBASE_API_KEY
-console.log(fireapi)
+// console.log(fireapi)
 // console.log(import.meta.env)
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
@@ -18,7 +18,8 @@ const firebaseConfig = {
   storageBucket: "ghosthebarber-e811e.firebasestorage.app",
   messagingSenderId: "896219638448",
   appId: "1:896219638448:web:75ee28f29ab8303a056975",
-  measurementId: "G-H9BMVP2TQP"
+  // measurementId: "G-H9BMVP2TQP"
+  // measurementId: "G-H9BMVP2TQP"
 };
 
 // Prevent multiple initializations

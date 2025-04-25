@@ -33,10 +33,10 @@ function Contact() {
                         };
                   
                         await emailjs.send(
-                          "service_h98w2c8", 
-                          "template_fcqgkcp",
+                          "service_thp3sxu", 
+                          "template_pg97uje",
                           emailParams,
-                          "V_ZWZy0yVNuywPrwJ" 
+                          "tcANO7ovuVVB7W2sP" 
                         );
 
                         alert("Message sent successfully!");
